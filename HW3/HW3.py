@@ -49,3 +49,6 @@ plt.savefig("plot.pdf")
 grav = coeff[0]**-1 *4*np.pi**2
 dgrav = np.mean([abs(a-b) for a,b in zip(fit,tsquare)])
 print(f"Graphically: ({round(grav,4)} +/- {round(dgrav,4)}) m/s")
+
+fakeg = 2*np.e/coeff[0]
+print(f"Alternative Hypothesis: ({round(fakeg,4)} +/- {round(dgrav,4)}) m/s")
